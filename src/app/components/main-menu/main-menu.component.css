@@ -33,7 +33,7 @@
   width: 250px;
   height: 80px;
   border-radius: 20px;
-  background-color: var(--purple);
+  background-color: #39004d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,6 +45,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #bfbfbf;
 }
 
 .left,
@@ -59,7 +61,15 @@
 }
 
 .left {
-  border-right: 2px solid white;
+  border-right: 1px solid #bfbfbf;
+  width: 50vw;
+  transition: all 0.5s ease-in-out;
+}
+
+.right {
+  border-left: 1px solid #bfbfbf;
+  width: 50vw;
+  transition: all 0.5s ease-in-out;
 }
 
 h1 {
@@ -70,11 +80,7 @@ h1 {
 
 h1>.gradient {
   animation: background-pan 3s linear infinite;
-  background: linear-gradient(to right,
-      var(--purple),
-      var(--violet),
-      var(--pink),
-      var(--purple));
+  background: linear-gradient(to right, var(--purple), var(--violet), var(--pink), var(--purple));
   background-size: 200%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -84,11 +90,7 @@ h1>.gradient {
 
 h2>.gradient {
   animation: background-pan 3s linear infinite;
-  background: linear-gradient(to right,
-      var(--violet),
-      var(--pink),
-      var(--purple),
-      var(--violet));
+  background: linear-gradient(to right, var(--violet), var(--pink), var(--purple), var(--violet));
   background-size: 200%;
   -webkit-background-clip: text;
   background-clip: text;
