@@ -55,6 +55,8 @@
   background-color: black;
   color: white;
   padding: 20px;
+  background-size: cover;
+  transition: background-image 10s ease-in-out;
 }
 
 .left {

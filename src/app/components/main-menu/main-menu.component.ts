@@ -1,5 +1,4 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-
 @Component({
   selector: 'app-main-menu',
   templateUrl: './main-menu.component.html',
@@ -8,6 +7,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 export class MainMenuComponent implements OnInit {
   buttonVisible: boolean = false;
   buttonVisibleInterval: any;
+  backgroundImageRight = '';
+  backgroundImageLeft = '';
 
   constructor(private elRef: ElementRef) {}
 
@@ -26,11 +27,26 @@ export class MainMenuComponent implements OnInit {
         leftDiv.style.width = '70vw';
         rightDiv.style.width = '30vw';
         middleDiv.style.top = '-25%';
+        this.backgroundImageLeft =
+          'url("../../../assets/images/lobby-close-up.jpg")';
+        if (this.backgroundImageRight === '') {
+          this.backgroundImageRight === '';
+        } else {
+          this.backgroundImageRight =
+            'url("../../../assets/images/dark-sunrise.jpg")';
+        }
         this.buttonVisible = true;
       } else if (event.target === rightDiv) {
         leftDiv.style.width = '30vw';
         rightDiv.style.width = '70vw';
         middleDiv.style.top = '-25%';
+        this.backgroundImageRight =
+          'url("../../../assets/images/about-me-back.jpg")';
+        if (this.backgroundImageLeft === '') {
+          this.backgroundImageLeft === '';
+        } else {
+          this.backgroundImageLeft = 'url("../../../assets/images/lobby.jpg")';
+        }
         this.buttonVisible = true;
       }
     });
@@ -39,6 +55,17 @@ export class MainMenuComponent implements OnInit {
       leftDiv.style.width = '50vw';
       rightDiv.style.width = '50vw';
       middleDiv.style.top = '5%';
+      if (this.backgroundImageRight === '') {
+        this.backgroundImageRight === '';
+      } else {
+        this.backgroundImageRight =
+          'url("../../../assets/images/dark-sunrise.jpg")';
+      }
+      if (this.backgroundImageLeft === '') {
+        this.backgroundImageLeft === '';
+      } else {
+        this.backgroundImageLeft = 'url("../../../assets/images/lobby.jpg")';
+      }
       this.buttonVisible = false;
     });
 
